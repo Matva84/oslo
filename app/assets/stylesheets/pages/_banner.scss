@@ -1,0 +1,69 @@
+.bannerRight {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: 16px;
+}
+
+.banner {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+  border-radius: 0px 0px 0px 0px;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(7%);
+    opacity: 0.8;
+  }
+  87% {
+    transform: translateX(-3%);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(-7%);
+    opacity: 0.8;
+  }
+  87% {
+    transform: translateX(3%);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-inLeft {
+  animation: slideInFromLeft 1.25s ease-out forwards;
+  animation-delay: 1s;
+  opacity: 1;
+}
+.slide-inRight {
+  animation: slideInFromRight 1.25s ease-out forwards;
+  animation-delay: 2s;
+  opacity: 1;
+}

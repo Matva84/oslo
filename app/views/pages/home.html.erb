@@ -1,2 +1,80 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="showcase" id="showcase">
+  <h1 class="black">Quelques <strong>réalisations</strong> </h1>
+  <div class="portfolio cards_grid">
+    <div class="card" id="card">
+      <a href="https://relax-agency.com/" target="_blank" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
+      <h1>relax agency</h1>
+    </div>
+    <div class="card decentered" id="card">
+      <a href="https://avocats-orphee.com/" target="_blank" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
+      <h1>Avocats Orphée</h1>
+    </div>
+    <div class="card" id="card">
+      <a href="https://relax-agency.com/" target="_blank" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
+      <canvas width="431" height="250" style="position: absolute; inset: 0px; z-index: -1;"></canvas>
+      <h1>My sneakers</h1>
+    </div>
+  </div>
+</div>
+
+<% if false %>
+  <div class="equipe">
+    <h1>Et si on jouait dans la même <strong class="hidden-tag">  équipe ?  </strong>  </h1>
+    <div data-controller="mousemove">
+      <a href="#rdv" id="btn-move" class="btnRDV" data-action="mousemove->mousemove#move">Parlons-en <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+<% end %>
+
+
+
+
+<div class="demo-wrapper">
+
+  <section class="demo-text">
+    <div class="wrapper text">
+      #ONFAITEQUIPÉENSEMBLE?
+    </div>
+  </section>
+
+<% list = ["https://images.unsplash.com/photo-1545220406-9464b49eb86e?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://images.unsplash.com/photo-1718086436850-ac77db40dadb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"] %>
+
+  <% w = 1240 %>
+  <% h = 874 %>
+  <% (1..4).each do |i| %>
+    <section class="demo-gallery">
+      <ul class="wrapper">
+        <% (1..rand(3..4)).each do |j| %>
+          <li>
+            <img src="https://source.unsplash.com/random/#{w}x#{h}/?photo" width="<%= w %>" height="<%= h %>">
+          </li>
+        <% end %>
+      </ul>
+    </section>
+  <% end %>
+
+  <section class="demo-text">
+    <div class="wrapper text">
+      #ONFAITEQUIPÉENSEMBLE?
+    </div>
+  </section>
+
+</div>
+
+
+
+
+<div class="left">
+  <h1 class="black">Nos <strong> services</strong> </h1>
+</div>
+
+<div class="boxes" id="services">
+
+  <div class="box-container">
+    <div class="box green" data-speed="0.25">Hébergement</div>
+    <div class="box purple" data-speed="0.4">Assurance qualité</div>
+    <div class="box orange" data-speed="0">Déploiement</div>
+    <div class="box red" data-speed="1">Développement</div>
+    <div class="box blue" data-speed="0.75">Optimisation SEO</div>
+  </div>
+</div>

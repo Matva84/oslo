@@ -1,0 +1,41 @@
+default: &default
+  source_path: app/javascript
+  source_entry_path: packs
+  public_root_path: public
+  public_output_path: packs
+  cache_path: tmp/cache/webpacker
+  check_yarn_integrity: false
+  webpack_compile_output: true
+  extensions:
+    - .mjs
+    - .js
+    - .sass
+    - .scss
+    - .css
+    - .module.sass
+    - .module.scss
+    - .module.css
+    - .png
+    - .svg
+    - .gif
+    - .jpg
+    - .jpeg
+    - .ico
+    - .woff
+    - .woff2
+    - .ttf
+    - .eot
+
+development:
+  <<: *default
+  compile: true
+
+test:
+  <<: *default
+  compile: true
+  public_output_path: packs-test
+
+production:
+  <<: *default
+  compile: false
+  cache_manifest: true

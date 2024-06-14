@@ -1,0 +1,94 @@
+//default button
+.btnDef {
+  color: #040303;
+  cursor: pointer;
+  // display: block;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 0 2em;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  background-color: var(--ternary-color);
+
+//   @media(min-width: 400px) {
+//     display: inline-block;
+//     margin-right: 2.5em;
+
+//     &:nth-of-type(even) {
+//       margin-right: 0;
+//     }
+//   }
+
+  @media(min-width: 600px) {
+
+    margin: 0 1em 2em;
+
+//     &:nth-of-type(even) {
+//       margin-right: 2.5em;
+//     }
+
+//     &:nth-of-type(5) {
+//       margin-right: 0;
+//     }
+
+  }
+
+  &:hover { text-decoration: none; }
+
+}
+
+/////////////////////////////////
+//button one
+///////////////////////////////
+.btnDef-1 {
+  background: var(--ternary-color);
+  font-weight: 100;
+  color: var(--secondary-color);
+
+  svg {
+    height: 45px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  rect {
+    fill: none;
+    stroke: #121212;
+    stroke-width: 2;
+    stroke-dasharray: 422, 0;
+    transition: all 0.35s linear;
+  }
+
+  a {
+    background: rgba($white, 0);
+    border-bottom: 1px solid;
+    color: $white;
+    line-height: 1.4;
+    padding: .25em;
+    text-decoration: none;
+
+    &:hover {
+      background: rgba($white, 1);
+      color: $red;
+    }
+  }
+}
+
+.btnDef-1:hover {
+  background: var(--ternary-color);
+  font-weight: 900;
+  letter-spacing: 1px;
+
+  rect {
+    stroke-width: 5;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}

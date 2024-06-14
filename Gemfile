@@ -50,6 +50,9 @@ gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
+gem 'threejs-rails', '~> 0.0.2'
+gem 'webpacker'
+gem 'greensock-rails'
 
 group :development, :test do
   gem "dotenv-rails"

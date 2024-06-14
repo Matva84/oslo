@@ -1,0 +1,34 @@
+.cursor {
+  position: fixed;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
+  left: -100px;
+  top: 50%;
+  background-color: var(--ternary-color);
+  z-index: 10000;
+  border: 2px solid var(--ternary-color);
+  height: 8px;
+  width: 8px;
+  transition: all 200ms ease-out;
+  opacity: 0.7;
+}
+#btn-move {
+  position: relative;
+  cursor: pointer;
+}
+
+button {
+  position: relative;
+  background: rebeccapurple;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border:5px solid white;
+  color: white;
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 50px;
+  cursor: pointer;
+  padding: 0;
+}

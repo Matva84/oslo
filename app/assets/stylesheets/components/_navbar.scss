@@ -10,3 +10,95 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-brand {
+  &:hover {
+    color: var(--ternary-color);
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.menu .link {
+  color: var(--primary-color);
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  text-decoration: none;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu .green {
+  color: var(--secondary-color);
+  background-color: var(--ternary-color);
+  border-radius: 16px;
+}
+
+.menu .link::after {
+  content: "";
+
+  display: block;
+  height: 0.1rem;
+  background: var(--orange);
+
+  transform: scale(0);
+  transition: transform var(--animation-timing);
+}
+
+.menu .link:hover::after {
+  transform: scale(1);
+  transform-origin: center;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.topnav {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.topnav_link {
+  color: black;
+  padding: 0px;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.menuicon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}

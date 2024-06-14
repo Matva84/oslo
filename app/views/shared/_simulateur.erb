@@ -1,0 +1,113 @@
+<div class="left">
+  <h1 class="black">What about the <strong> prices ?</strong> </h1>
+</div>
+
+<div class="fees" id="fees">
+  <div data-controller="form">
+    <form data-action="submit->form#submit" class="needs-validation" novalidate>
+
+      <div class="mb-3">
+        <label for="weborapp" class="form-label">Je voudrai lancer </label>
+        <select class="form-control" id="weborapp" data-form-target="weborapp" required>
+          <option value="">Select...</option>
+          <option value="site">un site web</option>
+          <option value="appli">une application web</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select Yes or No.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="pages" class="form-label">de combien de pages</label>
+        <input type="number" class="form-control" id="pages" data-form-target="pages" required>
+        <div class="invalid-feedback">
+          Please enter your age.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="features" class="form-label">J'ai besoin de fonctionalités avancées </label>
+        <select class="form-control" id="features" data-form-target="features" required>
+          <option value="">Select...</option>
+          <option value="1">oui</option>
+          <option value="0">non</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select Yes or No.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="design" class="form-label">J'ai besoin d'un design spécifique </label>
+        <select class="form-control" id="design" data-form-target="design" required>
+          <option value="">Select...</option>
+          <option value="1">oui</option>
+          <option value="0">non</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select Yes or No.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="content" class="form-label">J'ai besoin d'aide sur la création du contenu </label>
+        <select class="form-control" id="content" data-form-target="content" required>
+          <option value="">Select...</option>
+          <option value="1">oui</option>
+          <option value="0">non</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select Yes or No.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="delay" class="form-label">Je veux mon site pour </label>
+        <select class="form-control" id="delay" data-form-target="delay" required>
+          <option value="">Select...</option>
+          <option value="0">hier</option>
+          <option value="1">la semaine prochaine</option>
+          <option value="2">dans un mois</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select Yes or No.
+        </div>
+      </div>
+
+
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" data-form-target="email" required>
+        <div class="invalid-feedback">
+          Please enter a valid email address.
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="submissionModal" tabindex="-1" aria-labelledby="submissionModalLabel" aria-hidden="true" data-form-target="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="submissionModalLabel">Form Submission</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Your form has been submitted successfully!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

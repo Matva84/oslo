@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Oslo</title>
+    <title>oslo-stud.io</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,9 +10,44 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body><%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
+  <body>
+    <div class='cursor' id="cursor"></div>
 
-    <%= yield %>
+      <div class="loader" id="loader">
+        <span>0%</span>
+      </div>
+
+      <div class="banner">
+        <div class="animated-textLeft hidden">
+          <p><i class="fa-solid fa-arrows-rotate"></i> Retours illimités</p>
+        </div>
+        <div class="bannerRight animated-textRight hidden">
+          <a href="mailto:mathieu@oslo-stud.io" class="navbar-brand"><i class="fa-regular fa-envelope"></i> hello@oslo-stud.io</a>
+          <p> | </p>
+          <a href="#" class="navbar-brand"><i class="fa-solid fa-mobile-screen"></i> +33 (0) 6 50 25 60 91</a>
+          <p> | </p>
+          <a href="https://www.linkedin.com/in/mathieu-vall%C3%A9au/" class="navbar-brand" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <%= render "shared/navbar" %>
+
+      <%= yield %>
+
+      <%= render "shared/simulateur" %>
+
+      <div id="rdv" class="calendly-inline-widget" data-url="https://calendly.com/mathieu-rgvh/30min?primary_color=07ba4e" style="min-width:320px;height:700px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+      <%= render "shared/footer" %>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+      <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+      <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+      <div class="elfsight-app-98633dfd-862b-4f96-a56d-e37670d4239c" data-elfsight-app-lazy></div>
+
+      <%= render "shared/flashes" %>
+
   </body>
 </html>
